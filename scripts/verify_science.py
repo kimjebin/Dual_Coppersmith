@@ -15,7 +15,7 @@ def main():
     p.add_argument('--indices',default='all')
     args=p.parse_args();work=prepare(args.work)
     env=dict(os.environ,DUAL_COPPERSMITH_ROOT=str(ROOT),PYTHONDONTWRITEBYTECODE='1',
-        PYTHONPATH=os.pathsep.join((str(ROOT),str(ROOT/'baseline'),str(work))),
+        PYTHONPATH=os.pathsep.join((str(ROOT),str(ROOT/'second_minimum/experiments'),str(work))),
         OMP_NUM_THREADS='1',OPENBLAS_NUM_THREADS='1',MKL_NUM_THREADS='1')
     indices=list(range(21)) if args.indices=='all' else list(map(int,args.indices.split(',')))
     subprocess.run([sys.executable,str(work/'validate_lambda2_intervals.py'),'--indices',','.join(map(str,indices)),

@@ -2,7 +2,7 @@
 from pathlib import Path
 import argparse,hashlib,json,os,subprocess,sys
 ROOT=Path(__file__).resolve().parents[1]
-sys.path.insert(0,str(ROOT));sys.path.insert(0,str(ROOT/"baseline"))
+sys.path.insert(0,str(ROOT));sys.path.insert(0,str(ROOT))
 from shared import exact_minima as engine
 
 

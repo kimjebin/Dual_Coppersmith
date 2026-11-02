@@ -1,95 +1,86 @@
-# Dual Coppersmith experiments
+# Dual Coppersmith Artifact
 
-Anonymous research artifact for the original ACD and Herrmann--May (HM)
-experiments. The 21 seeded cases comprise 13 ACD and 8 HM cases. This repository
-contains the original recovery code, reduction measurements, projected-lattice
-experiments, exact witnesses, and certified bounds for the second successive
-minimum of the original lattice.
+Anonymous research code and recorded results for the ACD and Herrmann--May
+(HM) experiments. The artifact contains the original primal/dual recovery
+implementations and the later reduction, projection, and second-minimum
+experiments for the same 21 seeded cases.
 
-Start with [the 21-case comparison](results/tables/all_21_comparison.csv) and
-[the five unfinished cases](results/tables/unfinished_5_comparison.md).
-All reported lengths in those tables are base-2 logarithms.
+## Quick start
 
-| Quantity | Archived status |
-| --- | --- |
-| Original-lattice first minimum | 21 exact |
-| Original-lattice second minimum | 16 exact; 5 certified intervals |
-| Full projected-lattice first minimum | 16 exact; 5 checked candidate upper bounds |
-| Jet projected-lattice first minimum | 21 exact |
-| GH and jet formulas | Heuristic predictions |
-
-The five unfinished ACD cases are `(2,1,11)`, `(2,1,12)`, `(2,1,13)`,
-`(3,2,6)`, and `(3,2,7)`. Exact labels describe archived audited searches.
-Packaging checks do not rerun every full-dimensional exhaustive search.
-No claim of global optimality is made for the optimized bases.
-
-## Contents
-
-| Directory | Purpose |
-| --- | --- |
-| `baseline/` | Original recovery implementations, minima engine, and paper tables |
-| `core/` | Original ACD/HM lattice construction and portable reporting |
-| `configs/` | The 21 public case identifiers and parameter settings |
-| `experiments/engine/` | Search, sieving, reduction, basis optimization, and proof checkers |
-| `results/cases/` | Exact squared norms, status, prediction conventions, and source references |
-| `results/tables/` | Human-readable comparisons and actual RHF measurements |
-| `results/figures/` | Exportable comparison figure |
-| `data/` | Release asset checksums, member manifests, and repackaging provenance |
-| `docs/` | Mathematical methods, reproduction instructions, and data interpretation |
-| `scripts/`, `tests/` | Portable entry points and checks |
-| `third_party/` | Pinned upstream identities and preserved licenses |
-
-## Quick checks
-
-The source and summary checks use only Python's standard library:
+Use Linux or WSL with SageMath 10.9, GMP, fplll 5.5.0, and a C++17 compiler.
+The supplied `environment.yml` describes the Sage environment. Standard-library
+result checks need Python 3.11 or newer.
 
 ```bash
-python scripts/verify_submission.py
+python scripts/check.py
+sage -python scripts/smoke.py --work /tmp/dual-smoke
+```
+
+The smoke suite checks modular kernels, exact minima on small lattices,
+coefficient exclusions, corrupted Gram rejection, and one small HM recovery.
+It does not repeat the long paper grids.
+
+## Layout
+
+| Path | Contents |
+| --- | --- |
+| `acd/`, `hm/` | Original primal and dual recovery code and timing runners |
+| `shared/` | Modular kernels, reduction, exact-minimum engine, and upstream licenses |
+| `second_minimum/` | Paper geometry and timing scripts |
+| `second_minimum/experiments/` | RHF, projected minima, sieving, basis optimization, and bound verification |
+| `results/` | 21-case comparisons, exact rational values, statuses, and revised-paper upper reports |
+| `scripts/`, `tests/` | Experiment entry points, table generation, and scientific checks |
+
+## Representative runs
+
+Run from this directory and use new output directories for new measurements.
+
+```bash
+# One original ACD recovery instance and the HM sweep
+sage -python acd/run_acd.py 2 1 10
+python hm/run_hm.py --method both --out /tmp/hm-rerun.jsonl
+
+# Exact original-lattice minima; repeat to resume
+sage -python second_minimum/run_exact.py hm --ell 2 --workers 1 \
+  --max-seconds 120 --out /tmp/hm-minima
+
+# GH/jet formulas and original paper-table checks
+sage second_minimum/acd_jet_covolume.sage 3 3 5
+python scripts/audit_data.py
+python second_minimum/b1_bounds.py check
+
+# Regenerate compact comparisons without Sage or large data
 python scripts/make_tables.py --output /tmp/dual-tables
 ```
 
-For scientific checks, use Linux or WSL, SageMath 10.9, GMP, fplll, and a C++17
-compiler. A version-pinned conda environment is described in `environment.yml`;
-`environment.lock.json` records the versions actually used for the packaging
-checks. It is a selected version record, not a complete dependency lock.
+See [second-minimum experiments](second_minimum/README.md) for the projection,
+RHF, sieving, and bound commands. [DATA.md](DATA.md) explains provenance and
+the companion Release data.
 
-```bash
-micromamba create -f environment.yml
-micromamba activate dual-coppersmith
-python scripts/smoke.py --work /tmp/dual-smoke
-```
+## Result status
 
-The data ZIPs are companion GitHub Release assets. Download all assets into
-one directory and set its location; avoid committing the ZIPs to Git history.
-In the prepared package, they are in the sibling directory
-`dual-coppersmith-release-assets/`, which the extraction script also detects.
+There are 13 ACD and 8 HM cases. The original first minimum is archived exact
+on all 21 cases. The original second minimum has 16 archived exact values and
+5 certified intervals. The full projected first minimum has 16 archived exact
+values and 5 checked candidate upper bounds; all 21 jet projected values are
+archived exact. The unfinished cases are ACD `(2,1,11)`, `(2,1,12)`, `(2,1,13)`,
+`(3,2,6)`, and `(3,2,7)`.
 
-```bash
-export DUAL_COPPERSMITH_DATA=/path/to/downloaded-assets
-python scripts/verify_submission.py --data-dir "$DUAL_COPPERSMITH_DATA"
-python scripts/verify_science.py --work /tmp/dual-science
-```
+Start with [all 21 cases](results/all_21_comparison.csv) and
+[the five unfinished cases](results/unfinished_5_comparison.md).
+Table lengths are base-2 logarithms. GH and jet columns are heuristic
+predictions. Revised-paper, original-lattice BKZ, and lifting-derived upper
+bounds remain separate; lifting and its projected candidate share evidence.
+Historical exact labels describe archived audited searches, not a fresh
+full-dimensional recertification. No global basis optimality is claimed.
 
-The scientific check reconstructs exact membership, independence, changes of
-basis, and lower-form inequalities. `--replay-seconds 240` additionally reruns
-decisive small-block searches and fails on timeout. It does not recertify every
-archived full-dimensional shortest-vector search.
+Historical dual/flatter timing records retain their original provenance.
+Fresh runs here use Sage's proved fpLLL backend and have different timings.
+The measured RHF is distinct from the LLL Lovasz parameter and is not an SVP
+approximation guarantee.
 
-See [reproduction instructions](docs/REPRODUCING.md),
-[mathematical methods](docs/METHODS.md), and [data provenance](docs/DATA.md).
-New runs write into the chosen work directory. Preserve the repository and
-downloaded assets as the reference snapshot.
+## License
 
-## Interpretation
-
-`lambda_GH` and `lambda_jet` are predictions for projected geometry, not
-measured shortest-vector lengths. A projected candidate lifted into the
-original lattice gives a valid upper bound, but that bound and the candidate
-are dependent evidence. The tables therefore keep revised-paper upper bounds,
-original-lattice BKZ witnesses, and lifted projected witnesses separate.
-Revised-paper numbers are rounded printed values; local exact squared norms
-are stored separately.
-
-The actual root-Hermite factor is a descriptive reduction measurement. It is
-distinct from the Lovasz parameter of LLL and does not replace an SVP proof.
-Upstream copyright notices and licenses are retained.
+See [LICENSE](LICENSE), `shared/LICENSE.crypto-attacks`, and
+[upstream licenses](shared/licenses/README.md). Required upstream author
+attribution is preserved.

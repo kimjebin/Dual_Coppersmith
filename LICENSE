@@ -23,11 +23,11 @@ SOFTWARE.
 ------------------------------------------------------------------------------
 Third-party components:
 
-  * baseline/shared/ -- lattice and small-root utilities from jvdsn/crypto-attacks,
+  * shared/ -- lattice and small-root utilities from jvdsn/crypto-attacks,
     MIT License (c) 2020 Joachim Vandersmissen.
-    Full text: baseline/shared/LICENSE.crypto-attacks
+    Full text: shared/LICENSE.crypto-attacks
     Source:    https://github.com/jvdsn/crypto-attacks
 
   * Generated enumlib headers retain their embedded MIT notice.
     External fplll and G6K libraries retain their upstream licenses.
-    See third_party/README.md and third_party/manifest.json.
+    See shared/licenses/README.md for pinned upstream versions and licenses.

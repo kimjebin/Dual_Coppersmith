@@ -2,7 +2,7 @@
 from pathlib import Path
 import sys,unittest
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
-from verify_submission import check_results,check_source
+from check import check_results,check_source
 
 class ResultsTests(unittest.TestCase):
     def test_exact_rational_norms_intervals_and_table_regeneration(self):

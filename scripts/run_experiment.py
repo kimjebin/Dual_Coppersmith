@@ -18,9 +18,9 @@ TASKS={
 
 def prepare(work,case=None,hydrate=True,new_search=False):
     work=Path(work).resolve();work.mkdir(parents=True,exist_ok=True)
-    for source in (ROOT/"experiments/engine").rglob("*"):
+    for source in (ROOT/"second_minimum/experiments").rglob("*"):
         if not source.is_file() or "__pycache__" in source.parts:continue
-        relative=source.relative_to(ROOT/"experiments/engine");target=work/relative
+        relative=source.relative_to(ROOT/"second_minimum/experiments");target=work/relative
         if target.exists() and target.read_bytes()!=source.read_bytes():raise FileExistsError("Use a new work directory; source files differ")
         target.parent.mkdir(parents=True,exist_ok=True)
         if not target.exists():shutil.copyfile(source,target)
@@ -43,7 +43,7 @@ def main():
     parser.add_argument("--new-search",action="store_true",help="Do not hydrate archived minima or search states for the selected case")
     parser.add_argument("--no-unpack",action="store_true",help="Continue in an already initialized work directory without reference extraction")
     args,extra=parser.parse_known_args();extra=extra[1:] if extra[:1]==["--"] else extra
-    configs=json.loads((ROOT/"configs/cases_21.json").read_text());index=None
+    configs=json.loads((ROOT/"second_minimum/data/cases.json").read_text());index=None
     if args.case:
         matches=[case for case in configs if case["case_id"]==args.case]
         if not matches:parser.error("Unknown original case identifier")
@@ -57,7 +57,7 @@ def main():
     if index is not None:
         if args.task in {"geometry","projected"}:command += ["--indices",str(index)]
         elif args.task not in {"rhf","sieve","verify-vectors"}:command += ["--index",str(index)]
-    env=dict(os.environ,DUAL_COPPERSMITH_ROOT=str(ROOT),PYTHONPATH=str(ROOT)+os.pathsep+str(ROOT/"baseline")+os.pathsep+os.environ.get("PYTHONPATH",""),
+    env=dict(os.environ,DUAL_COPPERSMITH_ROOT=str(ROOT),PYTHONPATH=str(ROOT)+os.pathsep+str(ROOT/"second_minimum/experiments")+os.pathsep+os.environ.get("PYTHONPATH",""),
              PYTHONDONTWRITEBYTECODE="1",OMP_NUM_THREADS="1",OPENBLAS_NUM_THREADS="1",MKL_NUM_THREADS="1")
     subprocess.run(command+extra,cwd=work,env=env,check=True)
 

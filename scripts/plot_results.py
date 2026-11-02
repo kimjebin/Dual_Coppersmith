@@ -9,7 +9,7 @@ def main():
     import matplotlib.pyplot as plt
     parser=argparse.ArgumentParser();parser.add_argument('--output',type=Path,default=ROOT/'results/figures')
     args=parser.parse_args();args.output.mkdir(parents=True,exist_ok=True)
-    with (ROOT/'results/tables/unfinished_5_comparison.csv').open() as stream:rows=list(csv.DictReader(stream))
+    with (ROOT/'results/unfinished_5_comparison.csv').open() as stream:rows=list(csv.DictReader(stream))
     print('TABLE_COLUMNS',','.join(rows[0]),flush=True)
     fields=dict(lower='lambda2_certified_lower_log2',candidate='projected_value_log2',paper='revised_pdf_lambda2_upper_log2',bkz='local_BKZ_lambda2_upper_log2')
     # Column names are checked against the table schema before plotting.
