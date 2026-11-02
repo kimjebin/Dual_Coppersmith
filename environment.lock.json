@@ -1,0 +1,101 @@
+{
+  "schema": "anonymous-tested-environment-v1",
+  "platform": "Linux",
+  "architecture": "x86_64",
+  "python": "3.12.13",
+  "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "packages": {
+    "fplll": {
+      "name": "fplll",
+      "version": "5.5.0",
+      "build": "hd20a173_0",
+      "subdir": "linux-64"
+    },
+    "cython": {
+      "name": "cython",
+      "version": "3.2.5",
+      "build": "py312h68e6be4_0",
+      "subdir": "linux-64"
+    },
+    "gxx_linux-64": {
+      "name": "gxx_linux-64",
+      "version": "15.2.0",
+      "build": "hcb00b6d_27",
+      "subdir": "linux-64"
+    },
+    "qd": {
+      "name": "qd",
+      "version": "2.3.22",
+      "build": "h2cc385e_1004",
+      "subdir": "linux-64"
+    },
+    "mpfr": {
+      "name": "mpfr",
+      "version": "4.2.2",
+      "build": "he0a73b1_0",
+      "subdir": "linux-64"
+    },
+    "numpy": {
+      "name": "numpy",
+      "version": "2.4.6",
+      "build": "py312h33ff503_0",
+      "subdir": "linux-64"
+    },
+    "gxx_impl_linux-64": {
+      "name": "gxx_impl_linux-64",
+      "version": "15.2.0",
+      "build": "hda75c37_19",
+      "subdir": "linux-64"
+    },
+    "gcc_impl_linux-64": {
+      "name": "gcc_impl_linux-64",
+      "version": "15.2.0",
+      "build": "he0086c7_19",
+      "subdir": "linux-64"
+    },
+    "gcc_linux-64": {
+      "name": "gcc_linux-64",
+      "version": "15.2.0",
+      "build": "h7be306e_27",
+      "subdir": "linux-64"
+    },
+    "scipy": {
+      "name": "scipy",
+      "version": "1.17.1",
+      "build": "py312h54fa4ab_1",
+      "subdir": "linux-64"
+    },
+    "sage": {
+      "name": "sage",
+      "version": "10.9",
+      "build": "py312h5c4b4aa_0",
+      "subdir": "linux-64"
+    },
+    "python": {
+      "name": "python",
+      "version": "3.12.13",
+      "build": "hd63d673_0_cpython",
+      "subdir": "linux-64"
+    },
+    "gmp": {
+      "name": "gmp",
+      "version": "6.3.0",
+      "build": "hac33072_2",
+      "subdir": "linux-64"
+    },
+    "matplotlib-base": {
+      "name": "matplotlib-base",
+      "version": "3.10.9",
+      "build": "py312he3d6523_0",
+      "subdir": "linux-64"
+    },
+    "fpylll": {
+      "name": "fpylll",
+      "version": "0.6.4",
+      "build": "py312hdf8828e_2",
+      "subdir": "linux-64"
+    }
+  },
+  "installation_prefix_recorded": false,
+  "scope": "Version metadata from the environment used for packaging checks; no local account or host identity is included."
+}

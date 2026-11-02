@@ -1,0 +1,15 @@
+name: dual-coppersmith
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12.13
+  - sage=10.9
+  - fplll=5.5.0
+  - fpylll=0.6.4
+  - gmp=6.3.0
+  - mpfr=4.2.2
+  - qd=2.3.22
+  - numpy=2.4.6
+  - scipy=1.17.1
+  - matplotlib-base=3.10.9
+  - cython=3.2.5

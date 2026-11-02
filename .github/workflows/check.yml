@@ -1,0 +1,12 @@
+name: Source and result checks
+on: [push, pull_request]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python scripts/verify_submission.py
+      - run: python -m unittest discover -s tests -v

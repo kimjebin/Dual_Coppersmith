@@ -1,0 +1,4 @@
+# Frozen native-source checksums require byte-preserving checkout.
+* -text
+*.png binary
+*.pdf binary

@@ -1,0 +1,19 @@
+{
+  "schema_version": 2,
+  "scope": "Active ACD and Herrmann--May paper tables only",
+  "datasets": [
+    {
+      "path": "acd/results/raw/acd_paper.jsonl",
+      "records": 13,
+      "sha256": "1816c84f069505ff413ee0ab41e66f84af8508278e10c00fc7ed0cbbeaed549f",
+      "role": "Raw ACD dual/flatter timing records used by the paper"
+    },
+    {
+      "path": "second_minimum/data/paper_table_rows.csv",
+      "records": 21,
+      "sha256": "a77c6456b4febe2007810f587719c4d70d45deb08c614519fdc1272dc23f4165",
+      "role": "Machine-readable active paper rows with field-level provenance",
+      "status": "mixed raw and recorded-derived fields; see DATA.md"
+    }
+  ]
+}

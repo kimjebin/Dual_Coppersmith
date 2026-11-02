@@ -1,0 +1,91 @@
+{
+  "schema": "original-lattice-case-v1",
+  "index": 13,
+  "case_id": "hm-t3-m3-ell2-seed0",
+  "application": "HM",
+  "t": 3,
+  "m": 3,
+  "ell": 2,
+  "seed": 0,
+  "dimension": 10,
+  "original": {
+    "lambda1": {
+      "squared_norm": {
+        "numerator": "16873067294998641460374998273172007712663794393",
+        "denominator": "1"
+      },
+      "log2_length": "76.781707312347177679451138139661820594022254014281306077766355273332553681795275",
+      "value_kind": "certified_original_first_minimum",
+      "source": "results/hm-t3-m3-ell2-seed0/B.certificate.json"
+    },
+    "lambda2": {
+      "exact": {
+        "squared_norm": {
+          "numerator": "15589061779055785228713204501116905988007941170350988517674230466897360182472518401260748594818861918886821754603966119152964910673323584549972053",
+          "denominator": "1"
+        },
+        "log2_length": "241.16005393066930433286858911651822959709703364201338329915667691660987872578807",
+        "value_kind": "archived_audited_exact",
+        "source": "results/hm-t3-m3-ell2-seed0/B.certificate.json"
+      },
+      "lower": {
+        "squared_norm": {
+          "numerator": "15589061779055785228713204501116905988007941170350988517674230466897360182472518401260748594818861918886821754603966119152964910673323584549972053",
+          "denominator": "1"
+        },
+        "log2_length": "241.16005393066930433286858911651822959709703364201338329915667691660987872578807",
+        "value_kind": "certified_lower_bound",
+        "source": "lambda2_intervals/hm-t3-m3-ell2-seed0/bounds.json"
+      },
+      "upper_candidates": [
+        {
+          "origin": "original_paper_reported",
+          "log2_length": "241.2",
+          "squared_norm": null,
+          "value_kind": "enumerated",
+          "display_decimal_places": 1,
+          "source": "baseline/second_minimum/data/paper_table_rows.csv"
+        },
+        {
+          "origin": "archived_exact_lambda2",
+          "squared_norm": {
+            "numerator": "15589061779055785228713204501116905988007941170350988517674230466897360182472518401260748594818861918886821754603966119152964910673323584549972053",
+            "denominator": "1"
+          },
+          "log2_length": "241.16005393066930433286858911651822959709703364201338329915667691660987872578807",
+          "value_kind": "archived_audited_exact",
+          "source": "results/hm-t3-m3-ell2-seed0/B.certificate.json"
+        }
+      ]
+    }
+  },
+  "projection": {
+    "full": {
+      "squared_norm": {
+        "numerator": "2738773357705874163159595853242229124622124889121666045852322348178937036154731078913256775104391735704115995044142924127418074250406957312974636481998117924",
+        "denominator": "175685579833"
+      },
+      "log2_length": "241.16005393066930433286858911651822959709703364201338329915667691660987872578807",
+      "value_kind": "archived_audited_exact",
+      "source": "projected_minima/hm-t3-m3-ell2-seed0/full/minimum.json"
+    },
+    "jet": {
+      "squared_norm": {
+        "numerator": "2738773357705874163159595853242229124622124889121666045852322348178937036154731078913256775104391735704115995044142924127418074250406957312974636481998117924",
+        "denominator": "175685579833"
+      },
+      "log2_length": "241.16005393066930433286858911651822959709703364201338329915667691660987872578807",
+      "value_kind": "archived_audited_exact",
+      "source": "projected_minima/hm-t3-m3-ell2-seed0/jet/minimum.json"
+    }
+  },
+  "predictions": {
+    "GH_log2": "440.98491637722940679852282801714529288216155413652940692899941677860966331278619",
+    "jet_log2": "239.68687159021606448844137256297392658226454069724003644681199980016104866325242",
+    "GH_convention": "exact unit-ball volume in rank n-1",
+    "jet_convention": "paper asymptotic first-jet prediction",
+    "value_kind": "heuristic_prediction"
+  },
+  "optimization": null,
+  "certification_note": "Exact flags describe archived audited computations. Packaging does not rerun all exhaustive searches."
+}

@@ -1,0 +1,9 @@
+{
+  "purpose": "Validated proof adapter sources; preserve these versions once used",
+  "files": {
+    "unrolled_subtree.cpp": "53d2d33eb6a9be2ab8e86d7bf88e56c57afef851210525b31e8d3beb66528860",
+    "fast_lift.cpp": "fa8af57e95596b2ca4dec31c24fd2c5722cb0180a0809a5ba3f3cb537132ab3a",
+    "generated/fixed_enumlib.h": "3ecaee46e49121c95bb7ffae6006059a507f8555fa633752564142ed1cce39a7",
+    "generated/fixed_fplll_types.h": "ea28693b9d368e91b873ca5b1021c58ce01c94894fc2645de7cf0a09905c01d7"
+  }
+}

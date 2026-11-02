@@ -1,0 +1,6 @@
+.git
+.work
+.data
+__pycache__
+*.pyc
+runs

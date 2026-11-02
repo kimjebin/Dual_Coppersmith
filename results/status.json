@@ -1,0 +1,10 @@
+{
+  "original_cases": 21,
+  "original_lambda1_certified": 21,
+  "original_lambda2_archived_exact": 16,
+  "original_lambda2_unfinished": 5,
+  "projected_full_archived_exact": 16,
+  "projected_jet_archived_exact": 21,
+  "global_basis_optimality_proven": false,
+  "full_searches_rerun_for_packaging": false
+}

@@ -1,0 +1,91 @@
+{
+  "schema": "original-lattice-case-v1",
+  "index": 14,
+  "case_id": "hm-t3-m3-ell3-seed0",
+  "application": "HM",
+  "t": 3,
+  "m": 3,
+  "ell": 3,
+  "seed": 0,
+  "dimension": 20,
+  "original": {
+    "lambda1": {
+      "squared_norm": {
+        "numerator": "17599835992975394040115344633919386132865608685",
+        "denominator": "1"
+      },
+      "log2_length": "76.812127174874042968104991459540747461133005303471518833575784272544512945210185",
+      "value_kind": "certified_original_first_minimum",
+      "source": "results/hm-t3-m3-ell3-seed0/B.certificate.json"
+    },
+    "lambda2": {
+      "exact": {
+        "squared_norm": {
+          "numerator": "91857753656238478837636465966437433192166384023141918569656648618860129961081643832866337105264470063941942",
+          "denominator": "1"
+        },
+        "log2_length": "177.66188978076701024490430548128200593694746419149638092929202782147565561746860",
+        "value_kind": "archived_audited_exact",
+        "source": "results/hm-t3-m3-ell3-seed0/B.certificate.json"
+      },
+      "lower": {
+        "squared_norm": {
+          "numerator": "91857753656238478837636465966437433192166384023141918569656648618860129961081643832866337105264470063941942",
+          "denominator": "1"
+        },
+        "log2_length": "177.66188978076701024490430548128200593694746419149638092929202782147565561746860",
+        "value_kind": "certified_lower_bound",
+        "source": "lambda2_intervals/hm-t3-m3-ell3-seed0/bounds.json"
+      },
+      "upper_candidates": [
+        {
+          "origin": "original_paper_reported",
+          "log2_length": "177.7",
+          "squared_norm": null,
+          "value_kind": "enumerated",
+          "display_decimal_places": 1,
+          "source": "baseline/second_minimum/data/paper_table_rows.csv"
+        },
+        {
+          "origin": "archived_exact_lambda2",
+          "squared_norm": {
+            "numerator": "91857753656238478837636465966437433192166384023141918569656648618860129961081643832866337105264470063941942",
+            "denominator": "1"
+          },
+          "log2_length": "177.66188978076701024490430548128200593694746419149638092929202782147565561746860",
+          "value_kind": "archived_audited_exact",
+          "source": "results/hm-t3-m3-ell3-seed0/B.certificate.json"
+        }
+      ]
+    }
+  },
+  "projection": {
+    "full": {
+      "squared_norm": {
+        "numerator": "16833193635072819893883091648711428543434878377807390390168718466194979583337551797610412469860532404400377806654380941",
+        "denominator": "183252833485"
+      },
+      "log2_length": "177.66188978076701024490430548128200593694746419149638092929202778990264893855944",
+      "value_kind": "archived_audited_exact",
+      "source": "projected_minima/hm-t3-m3-ell3-seed0/full/minimum.json"
+    },
+    "jet": {
+      "squared_norm": {
+        "numerator": "16833193635072819893883091648711428543434878377807390390168718466194979583337551797610412469860532404400377806654380941",
+        "denominator": "183252833485"
+      },
+      "log2_length": "177.66188978076701024490430548128200593694746419149638092929202778990264893855944",
+      "value_kind": "archived_audited_exact",
+      "source": "projected_minima/hm-t3-m3-ell3-seed0/jet/minimum.json"
+    }
+  },
+  "predictions": {
+    "GH_log2": "315.71907281712386180448058541131284280169970335473528677704556655671806151489077",
+    "jet_log2": "176.71143572187043665919190286430275219023917277381100271295103698479660756427264",
+    "GH_convention": "exact unit-ball volume in rank n-1",
+    "jet_convention": "paper asymptotic first-jet prediction",
+    "value_kind": "heuristic_prediction"
+  },
+  "optimization": null,
+  "certification_note": "Exact flags describe archived audited computations. Packaging does not rerun all exhaustive searches."
+}

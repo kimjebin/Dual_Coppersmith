@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "Anonymous research artifact accompanying the submission."
+title: "Dual Coppersmith experiments"
+type: software
+authors:
+  - name: "The Dual Coppersmith authors"
+version: "1.0.0"
+license: MIT

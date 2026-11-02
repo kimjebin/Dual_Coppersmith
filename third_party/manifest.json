@@ -1,0 +1,16 @@
+{
+  "dependencies": [
+    {
+      "component": "g6k-c71e084dd003e1ffbfe8c91a7211b0ce9da22245",
+      "commit": "c71e084dd003e1ffbfe8c91a7211b0ce9da22245",
+      "tracked_patch_bytes": 0,
+      "license": "third_party/g6k-c71e084dd003e1ffbfe8c91a7211b0ce9da22245.LICENSE"
+    },
+    {
+      "component": "fplll-5.5.0",
+      "commit": "a8dedce384689047daba154bd50d6215e35bf03b",
+      "tracked_patch_bytes": 0,
+      "license": "third_party/fplll-5.5.0.LICENSE"
+    }
+  ]
+}

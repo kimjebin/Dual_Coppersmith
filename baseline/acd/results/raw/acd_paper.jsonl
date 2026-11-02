@@ -1,0 +1,13 @@
+{"backend": "flatter", "dim": 66, "ell": 10, "eta": 100, "gamma": 4388, "m": 1, "method": "dual", "recovered": true, "rho": 10, "schema_version": 1, "seed": 0, "status": "ok", "t": 2, "time_s": 2.225065231323242}
+{"backend": "flatter", "dim": 78, "ell": 11, "eta": 100, "gamma": 5135, "m": 1, "method": "dual", "recovered": true, "rho": 10, "schema_version": 1, "seed": 0, "status": "ok", "t": 2, "time_s": 3.5292603969573975}
+{"backend": "flatter", "dim": 91, "ell": 12, "eta": 100, "gamma": 5932, "m": 1, "method": "dual", "recovered": true, "rho": 10, "schema_version": 1, "seed": 0, "status": "ok", "t": 2, "time_s": 5.777455806732178}
+{"backend": "flatter", "dim": 105, "ell": 13, "eta": 100, "gamma": 6777, "m": 1, "method": "dual", "recovered": true, "rho": 10, "schema_version": 1, "seed": 0, "status": "ok", "t": 2, "time_s": 8.926741600036621}
+{"backend": "flatter", "dim": 66, "ell": 10, "eta": 100, "gamma": 860, "m": 2, "method": "dual", "recovered": true, "rho": 10, "schema_version": 1, "seed": 0, "status": "ok", "t": 2, "time_s": 2.4666357040405273}
+{"backend": "flatter", "dim": 78, "ell": 11, "eta": 100, "gamma": 935, "m": 2, "method": "dual", "recovered": true, "rho": 10, "schema_version": 1, "seed": 0, "status": "ok", "t": 2, "time_s": 4.253860950469971}
+{"backend": "flatter", "dim": 91, "ell": 12, "eta": 100, "gamma": 1008, "m": 2, "method": "dual", "recovered": true, "rho": 10, "schema_version": 1, "seed": 0, "status": "ok", "t": 2, "time_s": 7.395526170730591}
+{"backend": "flatter", "dim": 56, "ell": 5, "eta": 100, "gamma": 1206, "m": 2, "method": "dual", "recovered": true, "rho": 10, "schema_version": 1, "seed": 0, "status": "ok", "t": 3, "time_s": 2.0122971534729004}
+{"backend": "flatter", "dim": 84, "ell": 6, "eta": 100, "gamma": 1563, "m": 2, "method": "dual", "recovered": true, "rho": 10, "schema_version": 1, "seed": 0, "status": "ok", "t": 3, "time_s": 7.074627876281738}
+{"backend": "flatter", "dim": 120, "ell": 7, "eta": 100, "gamma": 1960, "m": 2, "method": "dual", "recovered": true, "rho": 10, "schema_version": 1, "seed": 0, "status": "ok", "t": 3, "time_s": 27.37275195121765}
+{"backend": "flatter", "dim": 56, "ell": 5, "eta": 100, "gamma": 481, "m": 3, "method": "dual", "recovered": true, "rho": 10, "schema_version": 1, "seed": 0, "status": "ok", "t": 3, "time_s": 1.5509519577026367}
+{"backend": "flatter", "dim": 84, "ell": 6, "eta": 100, "gamma": 557, "m": 3, "method": "dual", "recovered": true, "rho": 10, "schema_version": 1, "seed": 0, "status": "ok", "t": 3, "time_s": 5.635172605514526}
+{"backend": "flatter", "dim": 120, "ell": 7, "eta": 100, "gamma": 632, "m": 3, "method": "dual", "recovered": true, "rho": 10, "schema_version": 1, "seed": 0, "status": "ok", "t": 3, "time_s": 21.566720008850098}

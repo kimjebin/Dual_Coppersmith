@@ -1,0 +1,42 @@
+{
+  "audits": [
+    {
+      "candidate_sha256": "2f6d200d8bb4d66ba0d848e00532eb5162a406da059716f472aafd318bda6b4f",
+      "case": "acd-t2-m1-ell10-seed0",
+      "passed": true,
+      "shortestness_certified": true
+    },
+    {
+      "candidate_sha256": "5dc2d4c921ee588f417bbd9f6b93b56bafaf36efebdf805bb1a78a6c85927009",
+      "case": "acd-t2-m1-ell11-seed0",
+      "passed": true,
+      "shortestness_certified": false
+    },
+    {
+      "candidate_sha256": "be5ab79fd1c24db61adb9b655ca83da2a41d88a5cc64cb65a9f53c8a5a5c7a16",
+      "case": "acd-t2-m1-ell12-seed0",
+      "passed": true,
+      "shortestness_certified": false
+    },
+    {
+      "candidate_sha256": "9a9d6a3176a2f0334b47566128c8877bef2d739be2302bb79ca619a4e2fb1b0b",
+      "case": "acd-t2-m1-ell13-seed0",
+      "passed": true,
+      "shortestness_certified": false
+    },
+    {
+      "candidate_sha256": "a9bed293fce60efd36434d5cac890844e692e1747dfc4d244031ffd481e75547",
+      "case": "acd-t3-m2-ell6-seed0",
+      "passed": true,
+      "shortestness_certified": false
+    },
+    {
+      "candidate_sha256": "eb6930f91105f5222a665ad6eb3e54c3cdac650198c65f6293a59fa585b4d50d",
+      "case": "acd-t3-m2-ell7-seed0",
+      "passed": true,
+      "shortestness_certified": false
+    }
+  ],
+  "passed": 6,
+  "role": "Each vector is exactly the projection of an integer vector satisfying the original public modular constraints"
+}
